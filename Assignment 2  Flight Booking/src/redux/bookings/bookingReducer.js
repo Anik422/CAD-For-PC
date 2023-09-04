@@ -1,19 +1,27 @@
 import { ADDBOOKING, DELETEBOOKING } from "./actionTypes";
 
-const initialState = [];
+const initialState = {
+    counter: 0,
+    bookingList: [],
+};
  const bookingReducer = (state = initialState, action) => {
     switch(action.type){
         case ADDBOOKING:
             return (
-                [
+                {
                     ...state, 
-                    action.playload
-                ]
+                    counter: state.counter + 1,
+                    bookingList : [
+                        ...state.bookingList,
+                        action.playload
+                    ]
+                }
             )
         case DELETEBOOKING:
-            console.log(action.playload.id)
-            console.log(state)
-            return state.filter((item) => item.id !== action.playload.id)
+            return {
+                ...state,
+                bookingList: state.bookingList.filter((item) => item.id !== action.playload.id)
+            };
         default:
             return state;
     }

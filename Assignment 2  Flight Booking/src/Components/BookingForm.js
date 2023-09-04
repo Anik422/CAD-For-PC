@@ -2,13 +2,12 @@ import React from 'react';
 import { useSelector } from "react-redux";
 
 function BookingForm(props) {
-    const bookingList = useSelector((state) => state);
+    const counter = useSelector((state) => state.counter);
 
     const formHandler = (event) => {
         event.preventDefault();
-        const id = bookingList.length ? bookingList.length : 0;
         const formValue = {
-            id: id,
+            id: counter,
             destinationFrom: event.target.elements[0].value,
             destinationTo: event.target.elements[1].value,
             journeyDate: event.target.elements[2].value,

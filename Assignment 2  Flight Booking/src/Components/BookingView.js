@@ -9,7 +9,7 @@ function BookingView() {
     const dispatch = useDispatch();
 
     const addBookingHandler = (inputValue) => {
-        if(bookingList.length > 2){
+        if(bookingList.bookingList.length > 2){
             alert("You have already booked three flights!")
         }
         else{
@@ -35,7 +35,7 @@ function BookingView() {
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-300/20" id="lws-previewBooked">
-                        {bookingList ? bookingList.map((booking, kye) => <BookingListRow key={kye} booking={booking} bookingDeleteHandler={bookingDeleteHandler} /> ) : ''}
+                        {bookingList.bookingList ? bookingList.bookingList.map((booking, kye) => <BookingListRow key={kye} booking={booking} bookingDeleteHandler={bookingDeleteHandler} /> ) : ''}
                     </tbody>
                 </table>
             </div>
